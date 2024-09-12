@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "brusselportal",
+    "password": "L154%HF!412f",
+    "database": "brusselportal",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "brusselportal",
+    "password": "L154%HF!412",
+    "database": "brusselportal",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "brusselportal",
+    "password": "L154%HF!412",
+    "database": "brusselportal",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

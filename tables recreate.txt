@@ -1,0 +1,51 @@
+DROP TABLE IF EXISTS `UserEvents`;
+DROP TABLE IF EXISTS `Comments`;
+DROP TABLE IF EXISTS `Events`;
+DROP TABLE IF EXISTS `Users`;
+
+CREATE TABLE `Users` (
+  `username` VARCHAR(255) NOT NULL PRIMARY KEY,
+  `email` VARCHAR(255) NOT NULL UNIQUE,
+  `passwordHash` VARCHAR(255) NOT NULL,
+  `profilePicture` VARCHAR(255),
+  `address` VARCHAR(255),
+  `phoneNumber` VARCHAR(255),
+  `description` TEXT,
+  `createdAt` DATETIME NOT NULL,
+  `updatedAt` DATETIME NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE `Events` (
+  `id` VARCHAR(255) NOT NULL PRIMARY KEY,
+  `title` VARCHAR(255) NOT NULL,
+  `description` TEXT NOT NULL,
+  `date` DATE NOT NULL,
+  `time` TIME NOT NULL,
+  `location` VARCHAR(255) NOT NULL,
+  `organizer` VARCHAR(255) NOT NULL,
+  `category` VARCHAR(255) NOT NULL,
+  `createdAt` DATETIME NOT NULL,
+  `updatedAt` DATETIME NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE `UserEvents` (
+  `username` VARCHAR(255) NOT NULL,
+  `eventId` VARCHAR(255) NOT NULL,
+  `createdAt` DATETIME NOT NULL,
+  `updatedAt` DATETIME NOT NULL,
+  PRIMARY KEY (`username`, `eventId`),
+  FOREIGN KEY (`username`) REFERENCES `Users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`eventId`) REFERENCES `Events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE `Comments` (
+  `id` INTEGER AUTO_INCREMENT,
+  `username` VARCHAR(255) NOT NULL,
+  `eventId` VARCHAR(255) NOT NULL,
+  `content` TEXT NOT NULL,
+  `createdAt` DATETIME NOT NULL,
+  `updatedAt` DATETIME NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`username`) REFERENCES `Users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`eventId`) REFERENCES `Events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;

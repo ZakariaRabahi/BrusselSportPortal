@@ -1,0 +1,11 @@
+-- Drop existing foreign key constraints
+ALTER TABLE UserEvents DROP FOREIGN KEY userevents_ibfk_1;
+ALTER TABLE UserEvents DROP FOREIGN KEY userevents_ibfk_2;
+
+-- Modify the column type
+ALTER TABLE UserEvents MODIFY COLUMN username VARCHAR(255) NOT NULL;
+
+-- Re-add foreign key constraints
+ALTER TABLE UserEvents 
+  ADD CONSTRAINT userevents_ibfk_1 FOREIGN KEY (username) REFERENCES Users(username) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT userevents_ibfk_2 FOREIGN KEY (eventId) REFERENCES Events(id) ON DELETE CASCADE ON UPDATE CASCADE;
