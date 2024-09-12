@@ -19,4 +19,6 @@
 - Worked with relational databases to store and manage user data effectively.
 - Applied Web 2.0 principles for an interactive and community-driven platform.
 
+### frontend code can be found in the frontend-branch.
+
 You can view the project on GitHub: [BrusselSportPortal](https://github.com/yourusername/BrusselSportPortal)
