@@ -21,4 +21,4 @@
 
 ### frontend code can be found in the frontend-branch.
 
-You can view the project on GitHub: [BrusselSportPortal](https://github.com/yourusername/BrusselSportPortal)
+You can view the project on GitHub: [BrusselSportPortal](https://github.com/ZakariaRabahi/BrusselSportPortal)
