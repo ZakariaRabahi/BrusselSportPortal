@@ -1,0 +1,10 @@
+.link-button {
+      background-color: #f39c12;
+      border: none;
+}
+
+.link-button:hover {
+      background-color: #f3a932;
+      color: white;
+      transition: background-color 0.3s ease;
+}

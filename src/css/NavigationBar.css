@@ -1,0 +1,57 @@
+.navbar-custom {
+  background-color: #2c3e50; /* Dark blue background */
+  padding: 5px 0; /* Adjust padding to make the navbar smaller */
+}
+
+.navbar-brand-custom {
+  color: #ecf0f1 !important; /* Light text color */
+  font-size: 1.25rem; /* Adjust font size */
+  margin-right: auto; /* Align logo to the left */
+  padding: 0; /* Remove padding */
+  line-height: 1; /* Adjust line height */
+}
+
+.navbar-brand-custom:hover {
+  color: #f39c12 !important; /* Orange on hover */
+}
+
+.nav-link {
+  color: #ecf0f1 !important; /* Light text color */
+  margin: 0 10px; /* Add some spacing between links */
+  padding: 5px 0; /* Adjust padding to reduce height */
+  line-height: 1.5; /* Adjust line height */
+}
+
+.nav-link.active {
+  color: #f39c12 !important; /* Orange color for active link */
+}
+
+.nav-link:hover {
+  color: #f39c12 !important; /* Orange on hover */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border-color: white; /* Border color for the hamburger icon */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-custom {
+    padding: 10px; /* Slightly increase padding for mobile view */
+  }
+  
+  .navbar-brand-custom {
+    font-size: 1.5rem; /* Slightly larger font size for mobile view */
+  }
+
+  .nav-link {
+    padding: 10px 0; /* Increase padding for easier touch targets */
+    font-size: 1.2rem; /* Increase font size for mobile view */
+  }
+}

@@ -1,0 +1,25 @@
+/* Change the color of the tab titles */
+.nav-tabs .nav-item .nav-link {
+      color: #000000 !important; /* Change to your desired color */
+      font-weight: bold;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      padding: 5px 10px;
+      border-radius: 15px 15px 0 0px;
+    }
+    
+    .nav-tabs .nav-item .nav-link:hover {
+      color: #d19a23 !important; /* Change to your desired hover color */
+    }
+    
+    .nav-tabs .nav-item .nav-link.active {
+      color: #000000 !important; /* Change to your desired active tab color */
+      background-color: #c6c5c5; /* Change to your desired active tab background color */
+    }
+    
+    /* Adjust the width of the tabs */
+    .nav-tabs .nav-item {
+      color: #000000;
+    }
+    

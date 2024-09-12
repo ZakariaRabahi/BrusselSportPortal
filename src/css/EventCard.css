@@ -1,0 +1,32 @@
+.event-details-row {
+      margin-top: 10px;
+    }
+    
+.event-detail {
+      padding: 5px 10px; /* Reduced padding to make space smaller */
+}
+    
+.event-join-button {
+      margin-top: 15px;
+}
+
+.organizer-link {
+      padding: 5px;
+      color: #f39c12;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    
+    .organizer-link:hover {
+      color: #b6760f;
+    }
+
+.event-edit-button{
+      margin-top: 10px;
+      margin-right: 50px;
+}
+
+.event-delete-button{
+      margin-top: 10px;
+      margin-right: 50px;
+}
